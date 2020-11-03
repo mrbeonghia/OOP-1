@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle</title>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="500" style="border: blue 1px"></canvas>
+<script>
+    class Rectangle{
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+            get Length(){
+                return this.length;
+            }
+            set Length(length){
+                this.length = length;
+            }
+            get Width(){
+                return this.width;
+            }
+            set Width(width){
+                this.width = width;
+            }
+            get Area(){
+                return this.length*this.width;
+            }
+            get Perimeter(){
+                return (this.length+this.width)*2
+            }
+
+    }
+    let rectangle = new Rectangle();
+    rectangle.Length = +prompt("Nhập chiều dài:");
+    rectangle.Width = +prompt("Nhập chiều rộng");
+    let length = rectangle.Length;
+    let width = rectangle.Width;
+    let area = rectangle.Area;
+    let perimeter = rectangle.Perimeter;
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext('2d');
+    ctx.fillStyle = "#0088ff";
+    ctx.fillRect(10, 10,length,width );
+    alert("Diện tích:"+area+"Chu vi:"+perimeter);
+
+</script>
+</body>
+</html>

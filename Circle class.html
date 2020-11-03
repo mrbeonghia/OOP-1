@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle</title>
+</head>
+<body>
+<script>
+    class Circle{
+        constructor(radius)
+        {
+            this.radius = radius;
+        }
+            get Radius(){
+                return this.radius;
+            }
+            set Radius(radius){
+                this.radius = radius;
+            }
+            get Area(){
+                return Math.PI*this.radius*this.radius;
+            }
+
+    }
+    let circle = new Circle();
+    circle.Radius = +prompt("Nhập bán kính:")
+    let radius = circle.Radius;
+    let area = circle.Area;
+    alert("Bán kính: "+ radius+", Diện tích: "+area.toFixed(3));
+</script>
+</body>
+</html>

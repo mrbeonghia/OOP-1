@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function Student (id, name, address){
+    //     this.id = id;
+    //     this.name = name;
+    //     this.address = address;
+    //     this.getInfor = function (){
+    //         return 'Id='+this.id+ '<br>Name='+this.name+'<br>Address='+this.address;
+    //     }
+    // }
+    // let student = new Student(1,'Nguyễn Văn A','Hà Nội');
+    // // document.write(student.getInfor());
+
+    // let student = {
+    //     id:2,
+    //     name: 'Nguyễn Văn B',
+    //     address: 'Hà Nội',
+    //     getInfor: function (){
+    //         return 'Id='+this.id+ '<br>Name='+this.name+'<br>Address='+this.address;
+    //     }
+    // }
+    // document.write(student.getInfor())
+
+    let person = {
+        name: {
+            first: 'James',
+            last: 'Diniel',
+        },
+        age: 32,
+        gender: 'male',
+        interests: ['music','football'],
+        bio: function () {
+            alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He like ' + this.interests[0] + ' and ' + this.interests[1] + '. ');
+        },
+        greeting: function (){
+            alert("Hi! I'm "+this.name.first);
+        }
+    };
+    person.age = 45;
+    person.name.last = 'Crait';
+    // person.bio();
+    person.eyes = 'hazel';
+    person.farewell = function (){alert('Bye everybody!')};
+    let myDataName = 'height';
+    let myDataValue = '1.75m';
+    person[myDataName] = myDataValue;
+    console.log(person.height);
+</script>
+</body>
+</html>
